@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:linear-gradient(to right, #22BF80, #D77D8B);
+}
+#text:focus{
+   outline: none;
+   color:white;
+}
+.mypar{
+    color:white;
+}
