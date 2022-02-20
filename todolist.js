@@ -64,5 +64,23 @@ function displayToDo(){
     }
 //Update items from the todolist
   function edit(ind){
-     
+     saveInd.value = ind;
+     let todo = localStorage.getItem("todo");
+     todoArray = JSON.parse(todo);
+     text.value = todoArray[ind];
+     addTaskButton.style.display ="none";
+     saveTaskButton.style.display = "block";
   }
+  //saving our edited todo list
+  saveTaskButton.addEventListener("click", ()=>{
+      let todo =localStorage.getItem("todo");
+      todoArray = JSON.parse(todo);
+       let ind = saveInd.value;
+       todoArray[ind] = text.value;
+       addTaskButton.style.display ="block"
+       saveTaskButton.style.display ="none"
+       text.value ="";
+       localStorage.setItem("todo", JSON.stringify(todoArray));
+
+       displayToDo();
+  });
