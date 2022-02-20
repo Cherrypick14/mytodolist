@@ -12,3 +12,9 @@ body{
 .mypar{
     color:white;
 }
+.btnDelete{
+background: tomato;
+}
+.btnEdit{
+   background: #031F3A;
+}
